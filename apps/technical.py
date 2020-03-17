@@ -25,4 +25,5 @@ layout = html.Div([
 	html.P("If resources allow, testing may be done more broadly (for instance, through sentinel surveillance) to better assess the full extent of the circulation of the virus."),
 	html.P("Based on clinical judgment, clinicians may opt to order a test for the COVID-19 virus in a patient who does not strictly meet the case definition, for example, if there is acute respiratory illness among a cluster of health care workers or severe acute respiratory infection or pneumonia in families, workplaces or social networks.")
 		
-])
+],
+className='mx-4')

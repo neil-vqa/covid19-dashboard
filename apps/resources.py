@@ -34,4 +34,5 @@ layout = html.Div([
 	html.H6("Contact"),
 	html.P("For projects, comments, reactions, complaints, and/or suggestions, please email the developer: nvqa.business@gmail.com")
 	
-])
+], 
+className='mx-4')

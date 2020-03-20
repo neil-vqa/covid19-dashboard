@@ -15,39 +15,39 @@ layout = html.Div(
 	dbc.Row([
 		dbc.Col([
 			dbc.Col(dcc.Graph(id="card1",responsive=True,config={'displayModeBar': False}, style={'height':'100%'})
-			,className='rounded-lg shadow-sm',style={'backgroundColor':'#fef5ed','height':'100%'})
+			,className='rounded-lg shadow-sm',style={'backgroundColor':'#ffffff','height':'100%'})
 		],style={'height':'20vh'}, md=3),
 		dbc.Col([
 			dbc.Col(dcc.Graph(id="card2",responsive=True,config={'displayModeBar': False}, style={'height':'100%'})
-			,className='rounded-lg shadow-sm',style={'backgroundColor':'#fef5ed','height':'100%'})
+			,className='rounded-lg shadow-sm',style={'backgroundColor':'#ffffff','height':'100%'})
 		],style={'height':'20vh'}, md=3),
 		dbc.Col([
 			dbc.Col(dcc.Graph(id="card3",responsive=True,config={'displayModeBar': False}, style={'height':'100%'})
-			,className='rounded-lg shadow-sm',style={'backgroundColor':'#fef5ed','height':'100%'})
+			,className='rounded-lg shadow-sm',style={'backgroundColor':'#ffffff','height':'100%'})
 		],style={'height':'20vh'}, md=3),
 		dbc.Col([
 			dbc.Col(dcc.Graph(id="card4",responsive=True,config={'displayModeBar': False}, style={'height':'100%'})
-			,className='rounded-lg shadow-sm',style={'backgroundColor':'#fef5ed','height':'100%'})
+			,className='rounded-lg shadow-sm',style={'backgroundColor':'#ffffff','height':'100%'})
 		],style={'height':'20vh'}, md=3),
 	]),
 	dbc.Row([
 		dbc.Col([
 			dbc.Col(dbc.Row(dcc.Graph(id='map',config={'displayModeBar': False}, style={'height':'100%','width':'100%'}),style={'height':'100%'})
-			,className='rounded-lg shadow-sm',style={'backgroundColor':'#fef5ed','height':'100%'})
+			,className='rounded-lg shadow-sm',style={'backgroundColor':'#ffffff','height':'100%'})
 		],style={'height':'45vh'}, md=8),
 		dbc.Col([
 			dbc.Col(dbc.Row(dcc.Graph(id='mini-table',config={'displayModeBar': False}, style={'height':'100%','width':'100%'}),style={'height':'100%'})
-			,className='rounded-lg shadow-sm',style={'backgroundColor':'#fef5ed','height':'100%'})
+			,className='rounded-lg shadow-sm',style={'backgroundColor':'#ffffff','height':'100%'})
 		],style={'height':'45vh'}, md=4)
 	], className='mt-3'),
 	dbc.Row([
 		dbc.Col([
 			dbc.Col(dbc.Row(dcc.Graph(id='chart1',config={'displayModeBar': False}, style={'height':'100%','width':'100%'}),style={'height':'100%'})
-			,className='rounded-lg shadow-sm',style={'backgroundColor':'#fef5ed','height':'100%'})
+			,className='rounded-lg shadow-sm',style={'backgroundColor':'#ffffff','height':'100%'})
 		],style={'height':'20vh'}, md=4),
 		dbc.Col([
 			dbc.Col(dbc.Row(dcc.Graph(id='chart2',config={'displayModeBar': False}, style={'height':'100%','width':'100%'}),style={'height':'100%'})
-			,className='rounded-lg shadow-sm',style={'backgroundColor':'#fef5ed','height':'100%'})
+			,className='rounded-lg shadow-sm',style={'backgroundColor':'#ffffff','height':'100%'})
 		],style={'height':'20vh'}, md=4),
 		dbc.Col([
 			dbc.Col([
@@ -83,28 +83,28 @@ def update_cards(n_clicks, dummy_clicks):
 			value= sum_conf,
 			number={'valueformat':'.%f', 'font':{'size':30,'family':'Nunito Sans','color':'#d9534f'}},
 			title = {"text": 'Confirmed', 'font':{'size':25,'family':'Nunito Sans'}}))
-	card1.update_layout(margin= do.layout.Margin(t=35,b=0), plot_bgcolor='#fef5ed', paper_bgcolor='#fef5ed')
+	card1.update_layout(margin= do.layout.Margin(t=35,b=0), plot_bgcolor='#ffffff', paper_bgcolor='#ffffff')
 	
 	card2 = do.Figure(do.Indicator(
 			mode= 'number',
 			value= sum_deat,
 			number={'valueformat':'.%f', 'font':{'size':30,'family':'Nunito Sans','color':'#d9534f'}},
 			title = {"text": 'Deaths', 'font':{'size':25,'family':'Nunito Sans'}}))
-	card2.update_layout(margin= do.layout.Margin(t=35,b=0), plot_bgcolor='#fef5ed', paper_bgcolor='#fef5ed')
+	card2.update_layout(margin= do.layout.Margin(t=35,b=0), plot_bgcolor='#ffffff', paper_bgcolor='#ffffff')
 	
 	card3 = do.Figure(do.Indicator(
 			mode= 'number',
 			value= sum_rec,
 			number={'valueformat':'.%f', 'font':{'size':30,'family':'Nunito Sans','color':'#4bbf73'}},
 			title = {"text": 'Recovered', 'font':{'size':25,'family':'Nunito Sans'}}))
-	card3.update_layout(margin= do.layout.Margin(t=35,b=0), plot_bgcolor='#fef5ed', paper_bgcolor='#fef5ed')
+	card3.update_layout(margin= do.layout.Margin(t=35,b=0), plot_bgcolor='#ffffff', paper_bgcolor='#ffffff')
 	
 	card4 = do.Figure(do.Indicator(
 			mode= 'number',
 			value= len(countries),
 			number={'valueformat':'.%f', 'font':{'size':30,'family':'Nunito Sans','color':'#d9534f'}},
 			title = {"text": 'Countries with cases', 'font':{'size':20,'family':'Nunito Sans'}}))
-	card4.update_layout(margin= do.layout.Margin(t=35,b=0), plot_bgcolor='#fef5ed', paper_bgcolor='#fef5ed')
+	card4.update_layout(margin= do.layout.Margin(t=35,b=0), plot_bgcolor='#ffffff', paper_bgcolor='#ffffff')
 	
 	hover_text = ['Province/State: '+'{}'.format(x) + '<br>Country: '+'{}'.format(y) + '<br>Confirmed: '+'{}'.format(z) + '<br>Deaths: '+'{}'.format(v) + '<br>Recovered: '+'{}'.format(w) for x,y,z,v,w in zip(df_name,df_country,list(summary['Confirmed']),list(summary['Deaths']),list(summary['Recovered']))]
 	
@@ -151,7 +151,7 @@ def update_cards(n_clicks, dummy_clicks):
 				'fill':{'color':'#fef5ed'},'font':{'family':'Nunito Sans'}}
 		)
 	)
-	table.update_layout(margin= do.layout.Margin(t=0,b=0,l=0,r=0), plot_bgcolor='#fef5ed', paper_bgcolor='#fef5ed')
+	table.update_layout(margin= do.layout.Margin(t=0,b=0,l=0,r=0), plot_bgcolor='#ffffff', paper_bgcolor='#ffffff')
 	
 	line1 = do.Figure(
 		do.Scatter(
@@ -161,7 +161,7 @@ def update_cards(n_clicks, dummy_clicks):
 		)
 	)
 	line1.update_layout(
-		margin= do.layout.Margin(t=35,b=0,l=0,r=0), plot_bgcolor='#fef5ed', paper_bgcolor='#fef5ed',
+		margin= do.layout.Margin(t=35,b=0,l=0,r=0), plot_bgcolor='#ffffff', paper_bgcolor='#ffffff',
 		xaxis={'showgrid':False,'showticklabels':False},yaxis={'showgrid':False,'showticklabels':False},
 		title={'text':'Confirmed (previous 15-day range)','font':{'family':'Nunito Sans','size':12}}
 	)
@@ -174,7 +174,7 @@ def update_cards(n_clicks, dummy_clicks):
 		)
 	)
 	line2.update_layout(
-		margin= do.layout.Margin(t=35,b=0,l=0,r=0), plot_bgcolor='#fef5ed', paper_bgcolor='#fef5ed',
+		margin= do.layout.Margin(t=35,b=0,l=0,r=0), plot_bgcolor='#ffffff', paper_bgcolor='#ffffff',
 		xaxis={'showgrid':False,'showticklabels':False},yaxis={'showgrid':False,'showticklabels':False},
 		title={'text':'Recovered (previous 15-day range)','font':{'family':'Nunito Sans','size':12}}
 	)

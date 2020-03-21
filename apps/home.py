@@ -146,9 +146,9 @@ def update_cards(n_clicks, dummy_clicks):
 	
 	table = do.Figure(
 		do.Table(
-			header={'values':list(summary.columns),'fill':{'color':'#6cbddf'},'font':{'family':'Nunito Sans','color':'#ffffff'}},
+			header={'values':list(summary.columns),'fill':{'color':'#017cbf'},'font':{'family':'Nunito Sans','color':'#ffffff'}},
 			cells={'values':[summary.State,summary.Country,summary.Confirmed,summary.Deaths,summary.Recovered],
-				'fill':{'color':'#fef5ed'},'font':{'family':'Nunito Sans'}}
+				'fill':{'color':'#f5f4ef'},'font':{'family':'Nunito Sans'}}
 		)
 	)
 	table.update_layout(margin= do.layout.Margin(t=0,b=0,l=0,r=0), plot_bgcolor='#ffffff', paper_bgcolor='#ffffff')

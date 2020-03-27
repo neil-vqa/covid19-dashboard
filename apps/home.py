@@ -10,7 +10,7 @@ import os
 map_token = os.environ.get('MAPBOX_TOKEN')
 map_style = os.environ.get('MAPBOX_STYLE')
 
-layout = html.Div(
+layout = dcc.Loading(html.Div(
 	[
 	dbc.Row([
 		dbc.Col([
@@ -60,7 +60,7 @@ layout = html.Div(
 		],style={'height':'20vh'}, md=4)
 	], className='mt-3')
 	]
-)
+))
 
 @app.callback(
 	[Output('card1','figure'),
